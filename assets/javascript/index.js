@@ -15,7 +15,7 @@ const listenToAdd = (buttons) => {
         cartLS.add({ id, name, price })
       }
       dataLayer.push({
-        event: 'addToCart',
+        event: 'add_to_cart',
         item: { id, name, price },
         location: location
       })
@@ -99,7 +99,7 @@ if (contactForm) {
 const checkoutButton = document.getElementById('checkout-button')
 checkoutButton.addEventListener('click', (event) => {
   dataLayer.push({
-    event: 'goToCheckout',
+    event: 'go_to_checkout',
     location: 'cart',
     cart: cartLS.list(),
     totalPrice: cartLS.total(),
